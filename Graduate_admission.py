@@ -11,6 +11,7 @@ Y = df.iloc[:, 9]
 # 데이터 전처리
 X_scaled= MinMaxScaler().fit_transform(X)
 
+#섹스
 # 훈련셋, 검증셋, 시험셋
 train_input, sub_input, train_target, sub_target = train_test_split(X_scaled, Y, test_size=0.3)
 val_input, test_input, val_target, test_target = train_test_split(sub_input, sub_target, test_size=0.3)
